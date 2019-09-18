@@ -32,9 +32,15 @@ RE_SIGNATURE = re.compile(r'''
 RE_PHONE_SIGNATURE = re.compile(r'''
                (
                    (?:
+                       ^sent[ ]from[ ]a[ ]mobile[\s,!\w]*$
+                       |
                        ^sent[ ]{1}from[ ]{1}my[\s,!\w]*$
                        |
                        ^sent[ ]from[ ]Mailbox[ ]for[ ]iPhone.*$
+                       |
+                       ^sent[ ]from[ ]Samsung[\s,!\w]*$
+                    #    |
+                    #    ^sent[ ]([\S]*[ ])?from[ ]my[ ]iPhone.*$
                        |
                        ^sent[ ]([\S]*[ ])?from[ ]my[ ]BlackBerry.*$
                        |
